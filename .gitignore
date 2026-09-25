@@ -1,0 +1,18 @@
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+
+# Day 7 personal context stays private
+day7-executive-assistant/private/
+**/private/
+
+# Dependencies and build output
+node_modules/
+dist/
+.trigger/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
