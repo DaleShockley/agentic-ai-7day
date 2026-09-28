@@ -6,6 +6,8 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 2. **Career growth toward AI TPM** — a TPM write-up for every build, so the repo reads like real program work.
 3. **Stronger coding skills** — a small, deliberate coding lesson each day instead of blind copy-paste.
 
+**Theme:** every build day adds a piece of one capstone, a **TPM Reporting & Portfolio Builder**, using a *fictional* sample project. Goals, schedule (target **Oct 15, 2026**), scope and risks are in the [program charter](docs/00-program-charter.md).
+
 > **How to use this file:** Work top to bottom. Tick boxes as you go. Log each session in [PROGRESS.md](PROGRESS.md). To pick up in a new chat, see [Resuming in a new chat](#resuming-in-a-new-chat).
 
 ---
@@ -20,14 +22,16 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 | 4. Break it | Do the day's Failure Lab. Debugging is where the learning is. | 15 min |
 | 5. Code lesson | The day's coding skill-up (see each day). | 15–20 min |
 | 6. TPM write-up | Fill in [templates/tpm-writeup.md](templates/tpm-writeup.md) for the day. | 20 min |
-| 7. Quiz + commit | Claude quizzes you (5 questions). Commit and push to GitHub. | 10 min |
+| 7. Glossary + Go deeper | Add the day's new terms to [docs/glossary.md](docs/glossary.md) in your own words. Then Claude asks an interview question, you answer, and you rewrite it until it has engineering depth. | 15 min |
+| 8. Quiz + commit | Claude quizzes you (5 questions). Commit and push to GitHub. | 10 min |
 
-**Pace:** one day of the course per session, ~2–2.5 hours. Spreading it over ~2 weeks is fine and expected — understanding beats speed.
+**Pace:** one day of the course per session, ~2–2.5 hours, following the schedule in the [charter](docs/00-program-charter.md#4-plan-and-constraints). If you're ahead, pull the next session forward.
 
 **Ground rules**
 - Anything that **sends, publishes, deploys, or spends money** gets a human approval step.
 - **API keys never get committed.** They live in `.env` (already in `.gitignore`).
 - Ask "why?" whenever something isn't clear. That's the point.
+- Public repo: generic employer names and fictional sample data only.
 
 ---
 
@@ -56,15 +60,16 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 - Git basics: `git status`, `git add`, `git commit`, `git push` — what each actually does
 
 ### TPM deliverable
-- [ ] `docs/00-program-charter.md` — one page: why you're doing this, what "done" looks like in two weeks, risks to your own plan (time, cost, getting stuck)
+- [x] [docs/00-program-charter.md](docs/00-program-charter.md) — why, goals, scope, schedule, risks
+- [ ] Start [docs/glossary.md](docs/glossary.md) with terms from the Academy course
 
 ---
 
 ## Day 1 — Your First Workflow *(Beginner)*
-**Build:** Newsletter pipeline — research a topic, draft, save to `drafts/`, send only after approval.
-**Folder:** `day1-newsletter-automation/`
+**Build:** Weekly **status report** drafter. It reads a fictional project's inputs (milestones, updates, blockers), drafts an executive status report (RAG status, highlights, risks, asks), and saves it to `reports/`. A human reviews it before it's shared.
+**Folder:** `day1-status-report/`
 
-**Adaptation:** Use Claude's built-in web search for research ($0) instead of Perplexity. Keep sending as a manual step (or Gmail with an approval gate) until the draft quality is good.
+**Adaptation:** The course builds a newsletter; use the same prompt structure but point it at the status report. Create the fictional sample project first (`sample-project/`). Use Claude's built-in web search instead of Perplexity if research is needed ($0). No sending; drafts only.
 
 **Concepts:** CLAUDE.md as the project brain · workflows as plain-English recipes · Plan Mode · the WAT model (Workflows, Agent, Tools) · interactive building vs. deployed automation
 
@@ -72,20 +77,20 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 
 **Failure lab:** Empty research result → make the workflow handle it gracefully.
 
-**TPM write-up focus:** Define success metrics for a newsletter (quality, time saved, review rate). Where are the human-in-the-loop gates, and why?
+**TPM write-up focus:** Define success metrics for an automated status report (accuracy against the inputs, time saved, edits needed before sending). Where are the human-in-the-loop gates, and why?
 
 **Done when**
 - [ ] CLAUDE.md + `workflows/newsletter.md` exist
 - [ ] Plan Mode used before running
-- [ ] At least one draft in `drafts/`
+- [ ] At least one status report in `reports/`
 - [ ] I can explain WAT without notes
 - [ ] TPM write-up committed
 
 ---
 
 ## Day 2 — Using an MCP Server *(Beginner)*
-**Build:** Install Firecrawl as an MCP server and scrape live web data reliably.
-**Folder:** `day2-firecrawl-mcp/`
+**Build:** Install Firecrawl as an MCP server and use it to pull outside context into risk reviews: vendor status pages, release notes and industry news for the fictional project's dependencies.
+**Folder:** `day2-risk-context-mcp/`
 
 **Concepts:** What MCP is (a standard plug for tools) · MCP servers vs. built-in tools · choosing the right tool for the job · API keys and rate limits
 
@@ -97,21 +102,23 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 
 **Done when**
 - [ ] Firecrawl MCP connected (key in `.env`, not in git)
-- [ ] One successful scrape saved to a file
+- [ ] One successful scrape saved to a file and summarized as risk input
 - [ ] I can explain MCP to a non-engineer in two sentences
 - [ ] TPM write-up committed
 
 ---
 
 ## Day 3 — Building Skills *(Beginner)*
-**Build:** One custom Claude Code skill using the course's 6-step framework, iterated three times.
-**Folder:** `day3-skills/`
+**Build:** A **risk assessment** skill, using the course's 6-step framework and iterated three times. It produces a risk register (likelihood, impact, mitigation, owner) from project inputs, with a reference file for the scoring rubric.
+**Folder:** `day3-risk-skill/`
 
 **Concepts:** Skills as reusable prompt templates · reference files · context budget (loading too much hurts quality) · iteration as a product practice
 
 **Coding skill-up:** YAML frontmatter · git branches (make a branch per skill iteration, compare versions)
 
 **Failure lab:** The skill loads too much context → trim it.
+
+**Pre-read for Day 4 (20 min):** TypeScript basics (charter risk R1).
 
 **TPM write-up focus:** Treat each iteration like a release: what changed, how you measured "better," what you'd ship.
 
@@ -123,8 +130,9 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 ---
 
 ## Day 4 — Deploying an Automation *(Intermediate)*
-**Build:** Convert the Day 1 workflow into a TypeScript task on Trigger.dev that runs in the cloud.
-**Folder:** `day4-trigger-deploy/`
+**Build:** Convert the Day 1 status report workflow into a TypeScript task on Trigger.dev that runs in the cloud.
+**Folder:** `day4-deploy-status-report/`
+**Schedule:** Mon 10/5 plus Tue 10/6 as buffer.
 
 **Concepts:** Local vs. deployed · deterministic code vs. an agent improvising · environments (dev/prod) · secrets in production · logs and observability
 
@@ -142,8 +150,8 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 ---
 
 ## Day 5 — Website Building *(Intermediate)*
-**Build:** A landing page using a frontend design skill plus a screenshot → critique → fix loop.
-**Folder:** `day5-landing-page/`
+**Build:** Your **project portfolio** site, which showcases the builds and case studies. It uses a frontend design skill plus a screenshot → critique → fix loop.
+**Folder:** `day5-portfolio-site/`
 
 **Concepts:** Visual feedback loops · agents evaluating their own output · why concrete acceptance criteria matter
 
@@ -161,8 +169,8 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 ---
 
 ## Day 6 — Scheduled Automations and Loops *(Advanced)*
-**Build:** Loops, local scheduled tasks, remote routines, and a self-improvement loop with review gates.
-**Folder:** `day6-scheduled-automations/`
+**Build:** The weekly status report and risk refresh run on a schedule, with a review gate before anything is shared. Covers loops, local scheduled tasks, remote routines, and a self-improvement loop.
+**Folder:** `day6-scheduled-reporting/`
 
 **Concepts:** Unattended agents · review gates · idempotency (safe to run twice) · drift — why automations get worse over time without checks
 
@@ -179,11 +187,11 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 
 ---
 
-## Day 7 — Your Executive Assistant *(Advanced)*
-**Build:** A 4-phase personal EA (home, life, hands, growth) built in layers.
-**Folder:** `day7-executive-assistant/`
+## Day 7 — Your TPM Assistant *(Advanced)*
+**Build:** The course's 4-phase EA (home, life, hands, growth), built in layers as a **TPM assistant** that ties together status reports, risk reviews and the charter.
+**Folder:** `day7-tpm-assistant/`
 
-**Privacy rule:** Personal context files go in `day7-executive-assistant/private/` — **git-ignored**. Only the structure, skills, and sanitized examples are public.
+**Privacy rule:** Personal context files go in `day7-tpm-assistant/private/` — **git-ignored**. Only the structure, skills, and sanitized examples are public.
 
 **Concepts:** Personal context as a system · keeping context current · composing everything from Days 1–6
 
@@ -201,7 +209,9 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 ---
 
 ## Capstone *(after Day 7)*
-- [ ] **One production automation** you'll really use for work or life (pick from Days 1–7 and harden it)
+- [ ] **TPM Reporting & Portfolio Builder** — minimum: one project input file produces a status report, risk register and charter
+- [ ] **3 STAR interview stories** built from real specifics in this repo
+- [ ] **Mock interview** — "Go deeper" drill on 3 standard AI TPM questions (charter goal G3)
 - [ ] **Skill-stack write-up** — what you can now do, with links to each day
 - [ ] **Case study** `docs/capstone-case-study.md` in TPM format: problem → approach → architecture → risks → metrics → results → lessons
 - [ ] Update the repo README with a summary and a short demo (screenshots or GIF)

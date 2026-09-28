@@ -4,7 +4,7 @@
 !.env.example
 
 # Day 7 personal context stays private
-day7-executive-assistant/private/
+day7-tpm-assistant/private/
 **/private/
 
 # Dependencies and build output
