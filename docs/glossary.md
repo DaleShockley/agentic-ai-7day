@@ -27,7 +27,7 @@ For each term:
 
 3. Automate Repeat Work: Routines work should be scheduled. Use Headless mode when part of a pipeline.
 
-4. Verify and Share: vERIFY RUNS IN PROPOTION TO HOW LITTLE OF MUCH YOU WATCH THEM. Use Hooks to gate resuilts. "Read the diff rather then toe write-up"
+4. Verify and Share: vERIFY RUNS IN PROPOTION TO HOW LITTLE OF MUCH YOU WATCH THEM. Use Hooks to gate resuilts. "Read the diff rather then toe write-up" 
 
 ### Week 0
 <!-- To add from the Anthropic Academy course: agent loop, context window, CLAUDE.md, Plan Mode, MCP, MCP server, skill, hook, subagent, prompt vs. system prompt -->
