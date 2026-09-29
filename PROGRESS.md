@@ -1,7 +1,7 @@
 # Progress Log
 
 **Current phase:** Week 0: Setup and foundations
-**Next action:** Take Anthropic Academy "Claude Code in Action" and add its terms to docs/glossary.md. Then Day 1 (Tue 9/29): status report drafter.
+**Next action:** Week 0 glossary (agent loop, CLAUDE.md, Plan Mode in my own words), then Day 1 (Tue 9/29): status report drafter. MCP Academy course offline before Day 2.
 **Target finish:** Oct 15, 2026 (see [charter](docs/00-program-charter.md))
 
 ## Status

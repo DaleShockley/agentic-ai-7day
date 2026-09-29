@@ -43,11 +43,11 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 - [x] Install **Node.js LTS** from https://nodejs.org (needed for Day 2 MCP servers and Day 4 Trigger.dev)
 - [ ] Optional: install **VS Code** (the course uses it; the Claude desktop app works too)
 - [x] Push this folder to the repo as the first commit
-- [ ] Set a monthly spending limit on any paid service you sign up for
+- [x] Set a monthly spending limit on any paid service you sign up for
 
 ### Foundations (free, official)
-- [ ] Anthropic Academy — **Claude Code in Action** (https://anthropic.skilljar.com)
-- [ ] Anthropic Academy — **Introduction to Model Context Protocol**
+- [x] Anthropic Academy — **Claude Code in Action** (https://anthropic.skilljar.com)
+- [ ] Anthropic Academy — **Introduction to Model Context Protocol** (offline, before Day 2)
 
 ### Concepts to be able to explain after Week 0
 - What an **agent loop** is (model → decides → calls a tool → sees result → repeats)
