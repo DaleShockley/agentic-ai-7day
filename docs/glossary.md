@@ -7,6 +7,8 @@ For each term:
 - **How it works underneath:** the mechanism, one level deeper than the definition
 - **Interview sentence:** how I'd actually use it when describing work I've done
 
+Text marked *[added]* came from a review session. Rewrite it in my own words once I can explain it without notes.
+
 ---
 
 ## Example
@@ -21,23 +23,40 @@ For each term:
 ## Terms
 
 <!-- Add new terms below, grouped by the day you learned them. -->
-1. Steer the Work: In Plan mode, you need to direct  compaction summaries to keep what matters. You can use the rewind menu to revierss and correct issues. there is a Hands-on steering and autonomous goals.
-
-2. Configure Claude: CLAUDE.md files should be kept lean. Claude can follow a lean .md file. Repeat procedures should be skills. Pick the right permissions for each job. NON-negotiable rule should be enforred with HOOKS.
-
-3. Automate Repeat Work: Routines work should be scheduled. Use Headless mode when part of a pipeline.
-
-4. Verify and Share: vERIFY RUNS IN PROPOTION TO HOW LITTLE OF MUCH YOU WATCH THEM. Use Hooks to gate resuilts. "Read the diff rather then toe write-up"
-
-5. Compaction: Claude has no retained memory between turns. Each time a tern is started, Claude must reread the chat log. Longer chats this is measurered in tokens. The model can only hold a limited number at once. Quality drops as the chats get longer. reprocessing everything take longer and costs more to execute. Compaction replaces history with a summary. Details are lost, reasoning behind a decision is lost and the intstructions given mid-session is lost.
-
-6. Claude.md: is text loaded into the chat as context by the model. the Model reads toe text and chooses to follow. It can choose not to follow the instructions, doe to misjudgement wiather the rule applies, conflicts with other intstructions, losses track in a long converstaion and errors.
-- Executed by the Model, Can be ignored, good for Judgement, convertions and context and limitations are not guaranteed.
-
-8. Hooks: Are executed by the app. Hooks are scripts that runs at defined points in the lifecycle. The model does not decide whether to hook runs and it cannot stop it, argue with it or forget it. 
-- Executed by the Claude Code app, it cannot be ignored, its good for Rules with a mechanical check and it limitations is its only as smart as the script and only fires at lifecycle events.
-
-9. Headless mode: when Claude want to do something risky it checks its permissions,if its allowed it acts, it not cannot act. The prompt is the main safty gardrale. in Headless mode, there is no one to approve so anythng not pre-authorized can's get approved. Approvels must be made in advances and part of configurations. 
 
 ### Week 0
-<!-- To add from the Anthropic Academy course: agent loop, context window, CLAUDE.md, Plan Mode, MCP, MCP server, skill, hook, subagent, prompt vs. system prompt -->
+
+#### Compaction
+- **What it is:** Replacing the conversation history with a summary so the session can keep going when it gets too long.
+- **How it works underneath:** Claude has no retained memory between turns. Each time a turn starts, the whole chat log is sent to the model again. That log is measured in tokens, and the model can only hold a limited number at once (the context window). As chats get longer, quality drops, and reprocessing everything takes longer and costs more. Compaction swaps the history for a summary. What gets lost: details, the reasoning behind decisions, and instructions given mid-session. I can steer the summary to keep what matters.
+- **Interview sentence:** *TODO*
+
+#### CLAUDE.md
+- **What it is:** A project instruction file that is loaded into the conversation as context.
+- **How it works underneath:** It is loaded automatically at the start of every session *[added]*. The model reads the text and *chooses* to follow it. It can fail to follow it because it misjudges whether a rule applies, the rule conflicts with other instructions, it loses track in a long conversation, or it just makes an error. Because it is loaded every session, it costs context on every turn, so it should stay lean *[added]*.
+  - Executed by: the model. Can be ignored: yes. Good for: judgment, conventions, context. Limitation: not guaranteed.
+- **Interview sentence:** *TODO*
+
+#### Hook
+- **What it is:** A script that runs at defined points in the agent's lifecycle.
+- **How it works underneath:** Hooks are executed by the app, not the model. The model doesn't decide whether a hook runs, and it can't stop it, argue with it or forget it. A hook that runs *before* a tool call (`PreToolUse`) can block it: if the script exits with a block signal, the tool call never happens and the script's reason is sent back to the model so it can adjust *[added]*.
+  - Executed by: the Claude Code app. Can be ignored: no. Good for: rules with a mechanical check. Limitations: it's only as smart as the script, and it only fires at lifecycle events.
+- **Interview sentence:** *TODO (start here)*
+
+#### Headless mode
+- **What it is:** Running Claude without a human at the keyboard, for example as one step in a pipeline or a scheduled job.
+- **How it works underneath:** When Claude wants to do something risky, it checks its permissions: if the action is allowed it proceeds; if not, it can't. In an interactive session, the main safety guardrail is the **permission prompt** (the "Allow Claude to run this?" dialog a human answers). In headless mode there is no one to approve, so anything not pre-authorized can't be approved. Approvals have to be made in advance, as part of the configuration: allow/deny rules in a settings file, e.g. allow `git status`, deny `git push` *[added]*.
+- **Interview sentence:** *TODO*
+
+<!-- Still to add: agent loop, context window, Plan Mode, MCP, MCP server, skill, subagent, rewind, permissions, routine, prompt vs. system prompt -->
+
+---
+
+## Course notes: Claude Code in Action
+
+Key takeaways, in my words. These are principles rather than terms; the terms they mention get their own entries above.
+
+1. **Steer the work.** Direct compaction summaries to keep what matters. Use the rewind menu to reverse and correct issues. There is hands-on steering, and there are autonomous goals.
+2. **Configure Claude.** Keep CLAUDE.md files lean; Claude follows a lean file better. Repeat procedures should be skills. Pick the right permissions for each job. Non-negotiable rules should be enforced with hooks.
+3. **Automate repeat work.** Routine work should be scheduled. Use headless mode when Claude is part of a pipeline.
+4. **Verify and share.** Verify runs in proportion to how little you watch them. Use hooks to gate results. "Read the diff rather than the write-up."
