@@ -35,7 +35,7 @@ Text marked *[added]* came from a review session. Rewrite it in my own words onc
 - **What it is:** A project instruction file that is loaded into the conversation as context.
 - **How it works underneath:** It is loaded automatically at the start of every session *[added]*. The model reads the text and *chooses* to follow it. It can fail to follow it because it misjudges whether a rule applies, the rule conflicts with other instructions, it loses track in a long conversation, or it just makes an error. Because it is loaded every session, it costs context on every turn, so it should stay lean *[added]*.
   - Executed by: the model. Can be ignored: yes. Good for: judgment, conventions, context. Limitation: not guaranteed.
--**Interview sentence:**  CLAUDE.md is guidance, not enforcement: the model reads it every session and usually follows it, so I keep it lean, use it for conventions and context that need judgment, and back any rule that can't be broken with a hook.
+- **Interview sentence:** CLAUDE.md is guidance, not enforcement: the model reads it every session and usually follows it, so I keep it lean, use it for conventions and context that need judgment, and back any rule that can't be broken with a hook.
 
 #### Hook
 - **What it is:** A script that runs at defined points in the agent's lifecycle.
