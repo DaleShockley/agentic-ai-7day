@@ -21,6 +21,13 @@ For each term:
 ## Terms
 
 <!-- Add new terms below, grouped by the day you learned them. -->
+1. Steer the Work: In Plan mode, you need to direct  compaction summaries to keep what matters. You can use the rewind menu to revierss and correct issues. there is a Hands-on steering and autonomous goals.
+
+2. Configure Claude: CLAUDE.md files should be kept lean. Claude can follow a lean .md file. Repeat procedures should be skills. Pick the right permissions for each job. NON-negotiable rule should be enforred with HOOKS.
+
+3. Automate Repeat Work: Routines work should be scheduled. Use Headless mode when part of a pipeline.
+
+4. Verify and Share: vERIFY RUNS IN PROPOTION TO HOW LITTLE OF MUCH YOU WATCH THEM. Use Hooks to gate resuilts. "Read the diff rather then toe write-up"
 
 ### Week 0
 <!-- To add from the Anthropic Academy course: agent loop, context window, CLAUDE.md, Plan Mode, MCP, MCP server, skill, hook, subagent, prompt vs. system prompt -->
