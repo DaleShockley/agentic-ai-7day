@@ -1,0 +1,14 @@
+{
+  "report_date": "2026-09-25",
+  "overall": "Green",
+  "items": [
+    { "id": "M1", "type": "milestone", "color": "Green", "rule": "completed; actual - committed = -1 day (not late)", "committed": "2026-09-11", "forecast": null, "actual": "2026-09-10" },
+    { "id": "M2", "type": "milestone", "color": "Green", "rule": "open; 0 days late", "committed": "2026-10-09", "forecast": "2026-10-09", "actual": null },
+    { "id": "M3", "type": "milestone", "color": "Green", "rule": "open; 0 days late", "committed": "2026-10-23", "forecast": "2026-10-23", "actual": null },
+    { "id": "M4", "type": "milestone", "color": "Green", "rule": "open; 0 days late", "committed": "2026-11-13", "forecast": "2026-11-13", "actual": null },
+    { "id": "M5", "type": "milestone", "color": "Green", "rule": "open; 0 days late; external date not moved", "committed": "2026-12-01", "forecast": "2026-12-01", "actual": null },
+    { "id": "B1", "type": "blocker", "color": "Green", "rule": "owner named, target set, 3 business days old", "owner": "Sam Ortega", "opened": "2026-09-22", "target": "2026-09-30", "age_business_days": 3 }
+  ],
+  "closed_blockers": [],
+  "data_gaps": []
+}

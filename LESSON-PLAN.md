@@ -61,7 +61,7 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 
 ### TPM deliverable
 - [x] [docs/00-program-charter.md](docs/00-program-charter.md) — why, goals, scope, schedule, risks
-- [ ] Start [docs/glossary.md](docs/glossary.md) with terms from the Academy course
+- [x] Start [docs/glossary.md](docs/glossary.md) with terms from the Academy course
 
 ---
 
@@ -80,9 +80,9 @@ A structured path through the free [Agentic AI: 7-Day Build Challenge](https://b
 **TPM write-up focus:** Define success metrics for an automated status report (accuracy against the inputs, time saved, edits needed before sending). Where are the human-in-the-loop gates, and why?
 
 **Done when**
-- [ ] CLAUDE.md + `workflows/newsletter.md` exist
-- [ ] Plan Mode used before running
-- [ ] At least one status report in `reports/`
+- [x] CLAUDE.md + `workflows/status-report.md` exist
+- [x] Plan Mode used before running
+- [x] At least one status report in `reports/`
 - [ ] I can explain WAT without notes
 - [ ] TPM write-up committed
 

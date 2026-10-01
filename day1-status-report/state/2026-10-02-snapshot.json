@@ -1,0 +1,19 @@
+{
+  "report_date": "2026-10-02",
+  "overall": "Red",
+  "items": [
+    { "id": "M1", "type": "milestone", "color": "Green", "rule": "completed; actual - committed = -1 day (not late)", "committed": "2026-09-11", "forecast": null, "actual": "2026-09-10" },
+    { "id": "M2", "type": "milestone", "color": "Amber", "rule": "A milestone is 1 to 14 days late (forecast 2026-10-18 - committed 2026-10-09 = 9 days)", "committed": "2026-10-09", "forecast": "2026-10-18", "actual": null },
+    { "id": "M3", "type": "milestone", "color": "Green", "rule": "open; 0 days late", "committed": "2026-10-23", "forecast": "2026-10-23", "actual": null },
+    { "id": "M4", "type": "milestone", "color": "Green", "rule": "open; 0 days late", "committed": "2026-11-13", "forecast": "2026-11-13", "actual": null },
+    { "id": "M5", "type": "milestone", "color": "Green", "rule": "open; 0 days late; external date not moved", "committed": "2026-12-01", "forecast": "2026-12-01", "actual": null },
+    { "id": "B2", "type": "blocker", "color": "Red", "rule": "A blocker's owner is unassigned", "owner": "unassigned", "opened": "2026-09-29", "target": null, "age_business_days": 3 },
+    { "id": "B3", "type": "blocker", "color": "Amber", "rule": "A blocker's owner field is blank (data gap)", "owner": null, "opened": "2026-09-28", "target": "2026-10-09", "age_business_days": 4 }
+  ],
+  "closed_blockers": ["B1"],
+  "data_gaps": [
+    "B3: owner field blank",
+    "B2: target resolution date missing",
+    "Decision (archive 16 free-text fields): no decision owner or date"
+  ]
+}
