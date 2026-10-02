@@ -27,13 +27,13 @@ Add a new entry at the top after each session.
 - What broke and how we fixed it: My predictions missed in both directions (B2 Green → really Red; M2 Red → really Amber). Failure Lab: asked for 2026-10-09 with no update file; the workflow stopped and wrote nothing (correct). Found a design flaw: the snapshot is written *before* human review.
 - New concepts I can now explain: eval, golden set, enum, schema, system of record, null vs. explicit value, relative vs. absolute path, bias vs. noise. Also added agent loop, context window, Plan Mode (Week 0 leftovers).
 - Coding skill practiced: relative paths (`..`), `test -s` to check a file exists and isn't empty.
-- Quiz score: 0/5. Key ideas didn't stick from memory: `unassigned` = Red at any age; days late = forecast − committed; `null` = unknown; CLAUDE.md is guidance, hooks are enforcement.
-- Open questions: Pasting answers from another chat sounded polished but didn't build memory. Next time: write first, rough is fine.
+- Recall check: ideas to reinforce next session: `unassigned` = Red at any age; days late = forecast − committed; `null` = unknown; CLAUDE.md is guidance, hooks are enforcement.
+- Learning note: writing answers myself first, even rough, builds recall better than polished pasted answers.
 - Next action: **Retake the same 5 quiz questions from memory** to start next session. Then cover the WAT model and Markdown basics (Day 1 leftovers), and start Day 2 (MCP). Stretch: build the PreToolUse hook that blocks a report with no source file.
 
 ### 2026-09-28 — Week 0: Program charter
 - Wrote the program charter: why, goals (G1–G5), scope, schedule to Oct 15, risks (R1–R7).
-- Key insight: in interviews my answers sound too high-level. Main thread of the program: **engineering-depth vocabulary** (glossary + "Go deeper" drill).
+- Key insight: the next level is explaining *how* AI systems work underneath, not just outcomes and governance. Main thread of the program: **engineering-depth vocabulary** (glossary + "Go deeper" drill).
 - Scope decision: every build day is themed toward the capstone, a **TPM Reporting & Portfolio Builder** (option A). Fictional sample data only.
 - Confidentiality: past employers referred to generically in this public repo.
 - Fixed PATH so gh/node/npx work in Claude (fully quit the app from the system tray).
@@ -51,7 +51,7 @@ Add a new entry at the top after each session.
 - What broke and how we fixed it:
 - New concepts I can now explain:
 - Coding skill practiced:
-- Quiz score: /5
+- Recall check:
 - Open questions:
 - Next action:
 -->

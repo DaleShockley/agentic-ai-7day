@@ -4,8 +4,8 @@ A public learning repo for the free Agentic AI 7-Day Build Challenge (https://bu
 
 ## The learner
 - Senior TPM who has led agentic AI programs (governance, human-in-the-loop, metrics). Skip PM basics.
-- The gap is **hands-on building** and **engineering-depth vocabulary**: interview answers come out too high-level.
-- Coding: some experience, not yet comfortable, and wants to improve.
+- Focus areas: **hands-on building** and **engineering-depth vocabulary**, so answers explain how systems work underneath, not just outcomes.
+- Coding: some experience; building fluency through daily practice.
 
 ## How to teach in this repo
 - At the start of a session, read `PROGRESS.md` and summarize where the learner left off and what's next.

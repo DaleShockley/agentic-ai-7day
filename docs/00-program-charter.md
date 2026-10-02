@@ -11,7 +11,7 @@
 
 I've led agentic AI programs at enterprise scale, including co-designing the architecture and governance for an org-wide Claude/MCP bug-triage system at a Fortune 500 fintech. This program closes the gap between *leading* AI programs and *building* them myself. I'll design, build, deploy and operate agentic automations end to end, sharpen my technical vocabulary to engineering depth, and deliver a working **TPM Reporting & Portfolio Builder**. It's a hands-on version of the executive reporting systems I've built as a TPM, such as consolidating 25 fragmented trackers into one reporting cadence.
 
-**Problem statement:** In interviews, I describe AI programs at the outcome and governance level. My answers come across as too high-level because I don't yet have the engineering vocabulary and hands-on experience to explain *how* these systems work underneath.
+**Problem statement:** I've led AI programs at the outcome and governance level. This program adds the hands-on build experience and engineering vocabulary to explain *how* these systems work underneath, end to end.
 
 ## 2. Goals and success metrics
 
@@ -77,7 +77,7 @@ I've led agentic AI programs at enterprise scale, including co-designing the arc
 | R1 | Day 4 (TypeScript + deploy) runs over | H | M | Buffer on Tue 10/6; 20 minutes of TypeScript pre-reading on Day 3 |
 | R2 | Job search or interviews take priority | M | H | Weekends as overflow; the cut line protects the must-haves |
 | R3 | Claude usage limits on heavy build days | M | M | Plan Mode to reduce rework; split heavy days into two sessions |
-| R4 | Copy-pasting without learning, so answers stay high-level | M | H | Predict before each prompt, daily glossary, "Go deeper" drill, quiz |
+| R4 | Copy-pasting without learning, so depth doesn't stick | M | H | Predict before each prompt, daily glossary, "Go deeper" drill, quiz |
 | R5 | Confidential employer info leaks into the public repo | L | H | Generic names, fictional data, `git status` review before every push |
 | R6 | A third-party service changes its free tier or goes down (Firecrawl, Trigger.dev) | L | M | Fall back to built-in web search, or run locally |
 | R7 | Scope creep on the TPM tool | M | M | Capstone minimum: one project input file produces a status report, risk register and charter |
